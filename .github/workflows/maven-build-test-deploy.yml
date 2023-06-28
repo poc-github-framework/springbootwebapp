@@ -11,3 +11,6 @@ on:
 jobs:
   build-test-deploy:
     uses: poc-github-framework/java-workflow/.github/workflows/framework.yml@main
+    permissions:
+      checks: write
+      pull-requests: write
