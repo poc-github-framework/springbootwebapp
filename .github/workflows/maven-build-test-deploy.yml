@@ -13,3 +13,5 @@ jobs:
       checks: write
       pull-requests: write
       contents: read
+    with:
+      java_version: '16'    
