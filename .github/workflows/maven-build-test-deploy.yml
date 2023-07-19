@@ -15,4 +15,4 @@ jobs:
       checks: write
       pull-requests: write
     with:
-      JAVA_VERSION: ${{ $JAVA_VERSION }}
+      JAVA_VERSION: $JAVA_VERSION
