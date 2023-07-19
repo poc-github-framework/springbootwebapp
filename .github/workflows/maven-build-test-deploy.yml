@@ -14,5 +14,10 @@ jobs:
     permissions:
       checks: write
       pull-requests: write
+    secrets:
+      ARTIFACTORY_PASSWORD: ${{ vars.ARTIFACTORY_PASSWORD }}
     with:
       JAVA_VERSION: ${{ vars.JAVA_VERSION }}
+      ARTIFACTORY_USERNAME:  ${{ vars.ARTIFACTORY_USERNAME }}
+      ARTIFACTORY_SETTINGS_XML_URL: ${{ vars.ARTIFACTORY_SETTINGS_XML_URL }}
+      
