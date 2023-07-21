@@ -1,0 +1,10 @@
+name:Test Activity Workflow
+
+on:
+  workflow_dispatch:
+jobs:
+  greetings-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: welcome-step
+        run: echo "Welcome !!! Get Started with GitHub Workflow"
