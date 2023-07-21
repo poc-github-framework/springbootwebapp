@@ -6,4 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: welcome-step
-        run: echo "Welcome !!! Get Started with GitHub Workflow"
+        run: |
+          echo "RUN NUMBER ${{ GITHUB_RUN_NUMBER }}"
+          echo "RUN ID ${{ GITHUB_RUN_ID }}"
