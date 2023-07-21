@@ -1,6 +1,5 @@
-name:Test Activity Workflow
-
-on:
+name: Test Activity Workflow
+on: 
   workflow_dispatch:
 jobs:
   greetings-job:
