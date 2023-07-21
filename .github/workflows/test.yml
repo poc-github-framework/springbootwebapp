@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Build Version
         id: version
-        run: echo "::set-output name=buildVersion::$(date +'%Y-%m-%d'.$GITHUB_RUN_ID)"
+        run: echo "::set-output name=buildVersion::$(date +'%Y%m%d'.$GITHUB_RUN_NUMBER)"
       - name: welcome-step
         run: |
           echo "RUN NUMBER $GITHUB_RUN_NUMBER"
