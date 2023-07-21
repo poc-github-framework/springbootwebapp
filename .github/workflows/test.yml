@@ -4,8 +4,11 @@ on:
 jobs:
   greetings-job:
     runs-on: ubuntu-latest
+    env:
+      buildId: $(date '+%Y%m%d')
     steps:
       - name: welcome-step
         run: |
           echo "RUN NUMBER $GITHUB_RUN_NUMBER"
           echo "RUN ID $GITHUB_RUN_ID"
+          echo "build ID $buildId"
