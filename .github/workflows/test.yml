@@ -5,10 +5,13 @@ jobs:
   greetings-job:
     runs-on: ubuntu-latest
     env:
-      buildId: $(date '+%Y%m%d')
+      buildNumber: $(date '+%Y%m%d')
     steps:
+      - name: Build Version
+        id: version
+        run: echo "::set-output name=buildVersion::$(date +'%Y-%m-%d'.$GITHUB_RUN_ID)"
       - name: welcome-step
         run: |
           echo "RUN NUMBER $GITHUB_RUN_NUMBER"
           echo "RUN ID $GITHUB_RUN_ID"
-          echo "build ID $buildId"
+          echo "build Version ${{ steps.version.outputs.buildVersion }}
