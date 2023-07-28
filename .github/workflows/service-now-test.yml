@@ -13,12 +13,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Maven Build
-        run: mvn --batch-mode --update-snapshots clean install
-  changeApproval:
-    name: ServiceNow Change Approval
-    needs: build
-    runs-on: ubutun-latest
-    steps:     
+        run: mvn --batch-mode --update-snapshots clean install    
       - name: ServiceNow Change Approval
         uses: ServiceNow/servicenow-devops-change@v1.34.2
         with:
