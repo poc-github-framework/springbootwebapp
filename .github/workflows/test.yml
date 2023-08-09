@@ -17,3 +17,4 @@ jobs:
           echo "RUN NUMBER $GITHUB_RUN_NUMBER"
           echo "RUN ID $GITHUB_RUN_ID"
           echo "build Version ${{ steps.version.outputs.buildVersion }}"
+          docker -v
